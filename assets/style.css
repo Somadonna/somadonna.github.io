@@ -152,6 +152,18 @@ section .lede { color: var(--muted); margin-bottom: 28px; max-width: 620px; }
 .resource-stats .n { font-weight: 700; color: var(--accent); font-size: 22px; display: block; }
 .resource .fine { font-size: 14px; color: var(--muted); margin-top: 14px; }
 
+/* Testimonials */
+.quotes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.quote {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+}
+.quote .stars { color: #e8833a; font-size: 14px; letter-spacing: 2px; margin-bottom: 12px; }
+.quote p { font-size: 15px; flex: 1; }
+.quote .who { margin-top: 14px; font-size: 13px; color: var(--muted); }
+.quotes-cta { margin-top: 20px; }
+
 /* About */
 .about p { max-width: 680px; margin-bottom: 16px; }
 
