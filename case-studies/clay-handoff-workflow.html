@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clay handoff workflow: hours to minutes · Somadina Umeh</title>
+  <meta name="description" content="An automated reply detection workflow that finds phone numbers for interested leads and pushes them to Slack and Pipedrive, cutting handoff time from hours to minutes.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>⚙️</text></svg>">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="../index.html">Somadina Umeh</a>
+      <span class="links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </span>
+    </nav>
+
+    <header class="cs-header">
+      <a class="crumb" href="../index.html#work">← All case studies</a>
+      <h1>The Clay workflow that cut lead handoff from hours to minutes</h1>
+      <div class="cs-meta">
+        <div><span class="k">Result</span><br><span class="v">Handoff time: hours → minutes</span></div>
+        <div><span class="k">Stack</span><br><span class="v">Clay · Smartlead · Slack · Pipedrive</span></div>
+        <div><span class="k">Type</span><br><span class="v">Automation build</span></div>
+      </div>
+    </header>
+
+    <article>
+      <h2>The problem</h2>
+      <p>Positive replies were sitting unanswered for hours. Someone had to notice the reply in the sending tool, look up the lead, copy their details into the CRM, and ping whoever was booking calls. Every step was manual, and speed to lead matters. A prospect who replied at 9am and heard back at 2pm is a colder prospect.</p>
+
+      <h2>What I built</h2>
+      <p>An automated pipeline with reply detection at the front. When a reply came in, the workflow classified it, and positive replies triggered the rest of the chain automatically. The core of the build is what happens next: the workflow runs a phone number waterfall in Clay for every interested lead, so by the time a human sees the reply, they already have a number to call.</p>
+      <p>I recorded a full walkthrough of the workflow, including the phone number enrichment:</p>
+
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/TuyjyNPNO38?si=Tne-6pxbNk5Y8fr7" title="Clay handoff workflow walkthrough: finding phone numbers for interested leads" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+
+      <div class="diagram">
+        <svg viewBox="0 0 720 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Workflow diagram: reply detected, classified in Clay, phone number found via Clay waterfall, then pushed to Slack and Pipedrive" style="width:100%;height:auto;font-family:inherit">
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            </marker>
+          </defs>
+          <g fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="8" y="35" width="130" height="50" rx="10"/>
+            <rect x="190" y="35" width="130" height="50" rx="10"/>
+            <rect x="372" y="35" width="130" height="50" rx="10"/>
+            <rect x="554" y="8" width="158" height="42" rx="10"/>
+            <rect x="554" y="70" width="158" height="42" rx="10"/>
+            <line x1="138" y1="60" x2="184" y2="60" marker-end="url(#arrow)"/>
+            <line x1="320" y1="60" x2="366" y2="60" marker-end="url(#arrow)"/>
+            <line x1="502" y1="52" x2="548" y2="32" marker-end="url(#arrow)"/>
+            <line x1="502" y1="68" x2="548" y2="88" marker-end="url(#arrow)"/>
+          </g>
+          <g fill="currentColor" font-size="13" text-anchor="middle">
+            <text x="73" y="57">Reply detected</text>
+            <text x="73" y="74">(Smartlead)</text>
+            <text x="255" y="57">Classified</text>
+            <text x="255" y="74">(Clay)</text>
+            <text x="437" y="57">Phone number found</text>
+            <text x="437" y="74">(Clay waterfall)</text>
+            <text x="633" y="34">Slack alert</text>
+            <text x="633" y="96">Pipedrive deal</text>
+          </g>
+        </svg>
+      </div>
+
+      <p>The Slack message was not just a notification. It carried the enriched context: who the person is, company details, their phone number, what campaign and angle they replied to, and the reply itself. Whoever picked it up could respond immediately without opening three other tools, or just pick up the phone. In parallel, the same data created a deal in Pipedrive so nothing depended on someone remembering to log it.</p>
+
+      <h2>Results</h2>
+      <div class="highlight">Handoff time went from hours to minutes. Positive replies got answered while the prospect was still at their desk, with a phone number already attached, and the CRM stayed clean without anyone doing data entry.</div>
+
+      <h2>Why this matters beyond one client</h2>
+      <p>Most outbound problems past a certain scale are operations problems, not copy problems. Campaigns that generate replies are wasted if the replies leak out of a manual process. This kind of connective work between tools is, honestly, where I think a GTM engineer earns the title.</p>
+    </article>
+
+    <div class="cs-next">
+      <a class="btn btn-secondary" href="kidde.html">Next: KIDDE, €50k+ in pipeline →</a>
+    </div>
+
+    <footer>
+      <span>© 2026 Somadina Umeh</span>
+      <span><a href="mailto:somadon1000@gmail.com">somadon1000@gmail.com</a></span>
+    </footer>
+  </div>
+</body>
+</html>
